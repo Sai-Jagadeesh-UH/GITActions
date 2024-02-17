@@ -1,0 +1,24 @@
+name : complex-project
+
+on :
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  br1 :
+    runs-on: ubuntu-latest
+    steps:
+    - name: step1
+    uses : actions/checkout@v2
+    run: echo hai Sai Jagadeesh
+    - name: step2
+    run : |
+      echo printing details
+      ls -l
+      echo printing human readable size
+      ls -lh
+    
